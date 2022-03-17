@@ -1,2 +1,2 @@
 # calculadora
-Fazendo uma calculadora com HTML-CSS + JS
+Fazendo uma calculadora simples com HTML-CSS + JS
