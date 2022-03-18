@@ -1,32 +1,38 @@
 "use strict"
+function calculadora(valor){
+    const visor = document.querySelector(".visor");
 
-var numeros = [];
-
-function calcular(valor){
-    console.log(valor);
-
-    return valor;
-}
-
-function adicionar(valor){
-    const elemento = document.querySelector(".visor");
-    const valorVisor = elemento.value;
-
-    if(valor == "=")
-        elemento.value = calcular(valorVisor);
-    else{
-        const valorAdicionar = valorVisor + valor;
-        elemento.value = valorAdicionar;
+    if(isNaN(valor)){
+        limpar = false;
+    } else if(limpar){
+        visor.value = '';
+        limpar = false;
     }
+    
+    if(valor == "="){
+        visor.value = eval(visor.value);
+        limpar = true;
+    }
+    else
+        visor.value += valor;
 }
 
+let limpar = false;
 const listaDeBotoes = document.querySelectorAll('.botao')
 
 for(let i = 0; i < listaDeBotoes.length; i++){      
-    const botao = listaDeBotoes[i];
-    const botaoValor = botao.classList[1];
+    let valor = listaDeBotoes[i].textContent;
+
+    switch (valor) {
+    case 'x':
+        valor = "*";
+        break;
+    case '÷':
+        valor = "/";
+        break;
+    }
 
     listaDeBotoes[i].onclick = function() {        
-        adicionar(botaoValor);
+        calculadora(valor);
     }
 }
