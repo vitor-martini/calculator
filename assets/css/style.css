@@ -8,10 +8,14 @@ body{
     min-height: 100vh;
 }
 
+.calculadora{
+    background-color: #41555d;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0 #808080;
+    padding: 20px 10px;
+}
+
 .botoes {
-    background-color: #d3d3d3;
-    border-radius: 30px;
-    box-shadow: 5px 5px 0 #808080;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px; 
@@ -19,27 +23,35 @@ body{
 }
 
 .botao {
-    border: 1px solid black;
     border-radius: 20px;
-    box-shadow: 3px 3px 0 black;
+    box-shadow: 0 5px 0 #808080;
     background-color: #fdfdfd ;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
-    height: 80px;
+    height: 70px;
     width: 80px;
+}
+
+.igual{    
+    background-color: #fcaa2c;
+    color: #ffffff
 }
 
 .botao:hover{    
     background-color: #d3d3d3;
 }
 
+.igual:hover{    
+    background-color: #fa9703d0;
+    color: #ffffff
+}
+
 .visor {
-    background-color: #d3d3d3;
+    background-color: #ddedc8;
     border-radius: 10px;
-    font-family: monospace;
-    font-size: 22px;
-    height: 40px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
     margin-bottom: 24px;
     padding: 10px;
     text-align: right;
